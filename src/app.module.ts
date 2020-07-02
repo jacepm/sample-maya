@@ -7,13 +7,14 @@ import { routes } from "./app.routing.module";
   logs: "dev",
   port: 3333,
   database: Mongo({
-    connectionString: "your-connection-string-here",
+    connectionString: "mongodb+srv://root:root@sample.u1uyv.mongodb.net/test?retryWrites=true&w=majority",
     options: {
       useCreateIndex: true,
       useNewUrlParser: true,
-      useFindAndModify: false
-    }
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+    },
   }),
-  routes
+  routes,
 })
 export class AppModule {}
